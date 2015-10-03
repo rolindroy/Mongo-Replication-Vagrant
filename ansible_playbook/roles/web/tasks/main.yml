@@ -1,0 +1,6 @@
+---
+
+- include: install.yml
+- include: create_vhost.yml
+- include: copy_files.yml
+- include: update_hostfile.yml

@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+
+        ServerAdmin webmaster@localhost
+        ServerName arb.mongo.com
+        DocumentRoot /var/www/html/arb.mongo.com
+
+        <Directory /var/www/html/arb.mongo.com/>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+                Require all granted
+        </Directory>
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>

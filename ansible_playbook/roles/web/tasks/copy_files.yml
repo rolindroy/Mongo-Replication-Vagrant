@@ -1,0 +1,5 @@
+---
+
+- name: Copy files.
+  copy:  src={{file_name}}  dest={{item.documentroot}} mode=644
+  with_items: apache_vhosts

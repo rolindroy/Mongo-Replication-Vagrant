@@ -1,0 +1,14 @@
+---
+- hosts: all
+  user: vagrant
+  sudo: yes
+  
+  roles:
+    - web
+    
+#- hosts: machine_1
+#  user: vagrant
+#  sudo: yes
+#  
+#  roles:
+#    - web
