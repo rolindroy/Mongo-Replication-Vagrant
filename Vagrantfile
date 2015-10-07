@@ -10,6 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         "mongo1"   => { :ip => "192.168.100.153"},
         "mongo2"   => { :ip => "192.168.100.161"},
         "mongo3"   => { :ip => "192.168.100.157"},
+        "arbitor"  => { :ip => "192.168.100.154"},
     }
 
     cluster.each_with_index do |(hostname, info), index|

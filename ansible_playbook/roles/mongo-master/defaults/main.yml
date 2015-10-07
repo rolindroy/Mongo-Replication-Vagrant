@@ -8,3 +8,8 @@ mongo_host:
 - {machinename: "mongo2", port: "27017"}
 
 - {machinename: "mongo3", port: "27017"}
+
+
+mongo_arbitor:
+
+- {machinename: "arbitor", port: "27017"}

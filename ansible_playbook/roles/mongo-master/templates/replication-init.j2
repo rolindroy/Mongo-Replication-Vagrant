@@ -4,3 +4,8 @@ sleep(13000)
 rs.add("{{ host.machinename }}:{{ host.port }}")
 sleep(8000)
 {% endfor %}
+
+{% for arbtor in mongo_arbitor %}
+rs.add("{{ arbtor.machinename }}:{{ arbtor.port }}")
+sleep(8000)
+{% endfor %}

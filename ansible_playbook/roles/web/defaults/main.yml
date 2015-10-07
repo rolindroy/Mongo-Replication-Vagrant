@@ -21,6 +21,8 @@ host_file:
 
 - {ip: "192.168.100.157", servername: "mongo3"}
 
+- {ip: "192.168.100.154", servername: "arbitor"}
+
 
 apache_vhosts:
 
@@ -29,3 +31,5 @@ apache_vhosts:
 - {machinename: "mongo2", servername: "mongo2", documentroot: "/var/www/html/mongo2"}
 
 - {machinename: "mongo3", servername: "mongo3", documentroot: "/var/www/html/mongo3"}
+
+- {machinename: "arbitor", servername: "arbitor", documentroot: "/var/www/html/arbitor"}
