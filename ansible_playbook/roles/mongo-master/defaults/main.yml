@@ -1,0 +1,10 @@
+
+mongod_port: "27017"
+
+mongo_conf_file_name: "/etc/mongodb.conf"
+
+mongo_host:
+
+- {machinename: "mongo2", port: "27017"}
+
+- {machinename: "mongo3", port: "27017"}

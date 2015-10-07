@@ -1,0 +1,17 @@
+---
+
+- name: mongo start
+  shell: sudo /usr/bin/mongod --config "{{ mongo_conf_file_name }}"
+  
+- name: Create the file to initialize the mongod replica set
+  template: 
+    src=replication-init.j2 
+    dest=/tmp/replication-init.js
+    owner=root group=root mode=644 
+  with_items: mongo-host    
+
+- name: Pause for a while
+  pause: seconds=20
+
+- name: Initialize the replication set
+  shell: /usr/bin/mongo --port "{{ mongod_port }}" /tmp/replication-init.js

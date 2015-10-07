@@ -1,0 +1,6 @@
+rs.initiate()
+sleep(13000)
+{% for host in mongo_host %}
+rs.add("{{ host.machinename }}:{{ host.port }}")
+sleep(8000)
+{% endfor %}

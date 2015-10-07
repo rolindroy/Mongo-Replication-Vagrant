@@ -5,22 +5,27 @@ apache_create_vhosts: true
 
 apache_conf_path: "/etc/apache2/sites-available/"
 
+mongo_conf_path: "/etc/"
+
+mongo_conf_file_name: "mongodb.conf"
+
 file_name: "index.htm"
 
 host_path: "/etc/hosts"
 
 host_file:
 
-- {ip: "192.168.100.73", servername: "master.mongo.com"}
-- {ip: "192.168.100.152", servername: "arb.mongo.com"}
-- {ip: "192.168.100.156", servername: "m1.mongo.com"}
-- {ip: "192.168.100.154", servername: "m2.mongo.com"}
+- {ip: "192.168.100.153", servername: "mongo1"}
+
+- {ip: "192.168.100.161", servername: "mongo2"}
+
+- {ip: "192.168.100.157", servername: "mongo3"}
 
 
 apache_vhosts:
 
-- {machinename: "machine_1", servername: "m1.mongo.com", documentroot: "/var/www/html/m1.mongo.com"}
+- {machinename: "mongo1", servername: "mongo1", documentroot: "/var/www/html/mongo1"}
 
-- {machinename: "machine_2", servername: "m2.mongo.com", documentroot: "/var/www/html/m2.mongo.com"}
+- {machinename: "mongo2", servername: "mongo2", documentroot: "/var/www/html/mongo2"}
 
-- {machinename: "arbiter", servername: "arb.mongo.com", documentroot: "/var/www/html/arb.mongo.com"}
+- {machinename: "mongo3", servername: "mongo3", documentroot: "/var/www/html/mongo3"}
