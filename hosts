@@ -1,0 +1,11 @@
+[all]
+mongo1
+mongo2
+mongo3
+arbitor
+
+[master]
+mongo1
+
+[arbitor]
+arbitor

@@ -6,7 +6,7 @@
   roles:
     - web
     
-- hosts: mongo1
+- hosts: master
   user: vagrant
   sudo: yes
   
