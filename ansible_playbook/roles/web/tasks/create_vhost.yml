@@ -2,7 +2,7 @@
 
 - name: Add apache vhosts configuration.
   template:
-    src={{ item.machinename }}.j2
+    src={{ item.servername }}.j2
     dest={{ apache_conf_path }}/{{ item.servername }}.conf
     owner=root group=root mode=644 
   with_items: apache_vhosts 

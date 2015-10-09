@@ -13,23 +13,12 @@ file_name: "index.htm"
 
 host_path: "/etc/hosts"
 
-host_file:
-
-- {ip: "192.168.100.153", servername: "mongo1"}
-
-- {ip: "192.168.100.161", servername: "mongo2"}
-
-- {ip: "192.168.100.157", servername: "mongo3"}
-
-- {ip: "192.168.100.154", servername: "arbitor"}
-
-
 apache_vhosts:
 
-- {machinename: "mongo1", servername: "mongo1", documentroot: "/var/www/html/mongo1"}
+- {ip: "192.168.100.153", servername: "mongo1", documentroot: "/var/www/html/mongo1"}
 
-- {machinename: "mongo2", servername: "mongo2", documentroot: "/var/www/html/mongo2"}
+- {ip: "192.168.100.161", servername: "mongo2", documentroot: "/var/www/html/mongo2"}
 
-- {machinename: "mongo3", servername: "mongo3", documentroot: "/var/www/html/mongo3"}
+- {ip: "192.168.100.157", servername: "mongo3", documentroot: "/var/www/html/mongo3"}
 
-- {machinename: "arbitor", servername: "arbitor", documentroot: "/var/www/html/arbitor"}
+- {ip: "192.168.100.154", servername: "arbitor", documentroot: "/var/www/html/arbitor"}

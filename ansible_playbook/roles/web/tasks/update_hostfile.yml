@@ -4,5 +4,5 @@
   lineinfile:
     dest={{ host_path }}
     line="{{ item.ip }}  {{ item.servername }}"
-  with_items: host_file 
+  with_items: apache_vhosts 
   notify: apache-restart
